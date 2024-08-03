@@ -22,21 +22,6 @@
     height: auto;
     display: block; /* Assure que l'image ne dépasse pas le conteneur */
 }       
-        .card{
-            transition: 0.3s ease;
-            background: transparent;
-        }
-        .card:hover{
-            transform: scale(1.03);
-            border: 0.1rem solid gray;
-            cursor: pointer;
-            -webkit-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
-            -moz-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
-            box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
-        }
-        @media screen and (max-width: 768px){
-
-        }
     </style>
 </head>
 <body>
@@ -49,6 +34,9 @@
 </div>
 <div class="services">
     @yield('services')
+</div>
+<div class="profile">
+    @yield('profile')
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

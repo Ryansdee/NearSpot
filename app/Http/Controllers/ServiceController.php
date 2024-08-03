@@ -71,6 +71,7 @@ class ServiceController extends Controller
         return redirect()->route('services.index')->with('success', 'Service mis à jour avec succès');
     }
 
+
     // Supprimer un service spécifique
     public function destroy($id)
     {

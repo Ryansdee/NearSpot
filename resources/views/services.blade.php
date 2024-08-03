@@ -1,5 +1,19 @@
 @extends('layouts.app')
 @section('services')
+<style>
+    .card{
+            transition: 0.3s ease;
+            background: transparent;
+        }
+        .card:hover{
+            transform: scale(1.03);
+            border: 0.1rem solid gray;
+            cursor: pointer;
+            -webkit-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
+            -moz-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
+            box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.48);
+        }
+</style>
 <div class="container mt-2">
     <img src="{{ asset('storage/images/4.png') }}" alt="" style="width: 110%; height: auto;">
     <h2 class="text-center mt-4">

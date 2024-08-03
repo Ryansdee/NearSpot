@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+
+    // Define the relationship with User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
