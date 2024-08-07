@@ -22,22 +22,37 @@
     height: auto;
     display: block; /* Assure que l'image ne dépasse pas le conteneur */
 }       
+.tag-button.active {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
     </style>
 </head>
 <body>
+
 @include('layouts.navbar')
+
 <div class="carousel">
     @yield('carousel')
 </div>
+
 <div class="content">
         @yield('content')
 </div>
+
 <div class="services">
     @yield('services')
 </div>
+
+<div class="plombier">
+    @yield('plombier')
+</div>
+
 <div class="profile">
     @yield('profile')
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

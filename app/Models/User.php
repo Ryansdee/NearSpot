@@ -50,4 +50,24 @@ class User extends Authenticatable
     {
         return $this->hasMany(Service::class);
     }
+    public function index()
+    {
+        $services = Service::where('user_id', auth()->id())->with('user')->get(); // Charge aussi la relation user
+        return view('services.index', compact('services'));
+    }
+
+    public function showProfile()
+    {
+        $user = User::with('tags')->findOrFail(auth()->id());
+        $hasActiveSubscription = $this->checkActiveSubscription(); // Implémentez cette méthode selon votre logique
+    
+        return view('profile.index', compact('user', 'hasActiveSubscription'));
+    }
+
+// Dans le modèle User
+public function tags()
+{
+    return $this->belongsToMany(Tag::class, 'tag_user');
+}
+
 }
